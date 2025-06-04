@@ -14,7 +14,7 @@ public class Portfolio : MonoBehaviour {
 		}
 		
 		resumeButton.onClick.AddListener(() => {
-			
+			Application.OpenURL("https://plapi.github.io/Portfolio/resume.pdf");
 		});
 		gitButton.onClick.AddListener(() => {
 			Application.OpenURL("https://github.com/Plapi");
