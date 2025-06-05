@@ -9,9 +9,6 @@ public class Portfolio : MonoBehaviour {
 	[SerializeField] private ProjectVideo[] videos;
 	
 	private void Awake() {
-		
-		Debug.LogError("Screen size " + Screen.width + " x " + Screen.height);
-		
 		if (!Application.isEditor) {
 			scrollRect.scrollSensitivity = 0.02f;
 		}
