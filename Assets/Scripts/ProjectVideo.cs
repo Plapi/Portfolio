@@ -21,7 +21,8 @@ public class ProjectVideo : MonoBehaviour {
 				onPlay?.Invoke();
 				videoPlayer.gameObject.SetActive(true);
 				if (string.IsNullOrEmpty(videoPlayer.url)) {
-					videoPlayer.url = $"{Application.streamingAssetsPath}/{videoName}.mp4";
+					videoPlayer.url = Application.isEditor ? $"{Application.streamingAssetsPath}/{videoName}.mp4" :
+						$"StreamingAssets/{videoName}.mp4";
 				}
 				videoPlayer.Play();
 			} else {
